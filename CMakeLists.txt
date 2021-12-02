@@ -1,15 +1,23 @@
 cmake_minimum_required (VERSION 3.20)
 
-project ("AdventOfCode")
+project ("Avent_Of_Code")
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_library (Utils STATIC "utils/BaseTypes.h" "utils/Timer.h" "utils/Timer.cpp" "utils/Utils.h")
-target_precompile_headers(Utils PUBLIC "utils/pch.h")
-link_libraries(Utils)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-add_subdirectory("2020/1")
+add_library (utils STATIC "utils/base_types.h" "utils/timer.h" "utils/timer.cpp")
 
+target_precompile_headers(utils PUBLIC "utils/pch.h")
 
+link_libraries(utils)
+
+add_executable(day_01 "./src/day_01.cpp")
+
+add_custom_command(
+        TARGET day_01 POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy
+                ${CMAKE_SOURCE_DIR}/src/day_01_input_01.txt
+                ${CMAKE_CURRENT_BINARY_DIR}/day_01_input_01.txt)

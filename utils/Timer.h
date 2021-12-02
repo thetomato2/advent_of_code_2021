@@ -7,12 +7,18 @@ class Timer
 {
 public:
 	Timer();
-	float mark();
-	float peek() const;
-	float total() const;
+
+	f32
+	mark();
+
+	f32
+	peek() const;
+
+	f32
+	total() const;
 
 private:
 	std::chrono::steady_clock::time_point start_;
 	std::chrono::steady_clock::time_point last_;
 };
-}  // namespace utils
+}  // namespace util
