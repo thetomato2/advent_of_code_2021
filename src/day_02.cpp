@@ -31,10 +31,10 @@ struct Move
 	s32 units_;
 };
 
-int
+s32
 main()
 {
-	std::string input_path { "day_02_input_01.txt" };
+	std::string input_path { "day_02_input.txt" };
 	std::ifstream input_file(input_path);
 	std::vector<Move> moves;
 

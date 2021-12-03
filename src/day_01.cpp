@@ -3,7 +3,7 @@
 s32
 main()
 {
-	std::string input_01_path { "day_01_input_01.txt" };
+	std::string input_01_path { "day_01_input.txt" };
 	std::ifstream input_01_file(input_01_path);
 	std::vector<s32> nums;
 	std::string cur_line;
@@ -32,7 +32,6 @@ main()
 
 	std::cout << "Increase count: " << inc_cnt << std::endl;
 
-	// =========================================================
 	// part 2
 	// =========================================================
 
