@@ -119,7 +119,7 @@ main()
 	}
 
 	// NOTE: Part 2 is very easy, we just store a pointer to the winning board and store if a board
-	// has won. No reason to repeat code here, just make lambda
+	// has won. No reason to repeat code here, just make a lambda
 
 	auto get_board_sum = [](Board& board) {
 		s32 sum {};
