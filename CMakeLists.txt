@@ -18,6 +18,14 @@ add_executable(day_01 "./src/day_01.cpp")
 add_executable(day_02 "./src/day_02.cpp")
 add_executable(day_03 "./src/day_03.cpp")
 add_executable(day_04 "./src/day_04.cpp")
+add_executable(day_05 "./src/day_05.cpp")
+
+# NOTE: for emacs
+add_custom_command(
+        TARGET day_01 POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy
+                ${CMAKE_CURRENT_BINARY_DIR}/compile_commands.json
+                ${CMAKE_SOURCE_DIR}/compile_commands.json)
 
 #TODO: maybe batch copy all input files
 add_custom_command(
@@ -43,3 +51,9 @@ add_custom_command(
         COMMAND ${CMAKE_COMMAND} -E copy
                 ${CMAKE_SOURCE_DIR}/src/day_04_input.txt
                 ${CMAKE_CURRENT_BINARY_DIR}/day_04_input.txt)
+
+add_custom_command(
+        TARGET day_05 POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy
+                ${CMAKE_SOURCE_DIR}/src/day_05_input.txt
+                ${CMAKE_CURRENT_BINARY_DIR}/day_05_input.txt)
