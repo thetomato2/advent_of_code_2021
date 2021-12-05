@@ -6,6 +6,7 @@
 #include <fstream>
 #include <iostream>
 #include <limits>
+#include <numeric>
 #include <sstream>
 #include <string>
 #include <vector>
