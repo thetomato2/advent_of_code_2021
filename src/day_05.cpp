@@ -22,6 +22,9 @@ main()
 	std::ifstream input_file(input_path);
 	std::vector<Line> vents;
 
+	util::Timer timer;
+
+	timer.mark();
 	if (input_file.is_open()) {
 		std::string line;
 		while (std::getline(input_file, line)) {
@@ -59,9 +62,11 @@ main()
 	} else {
 		std::cout << "Failed to open " << input_path << "!\n";
 	}
+	auto time_to_read_file = timer.mark();
 
 	s32 vent_graph[1000][1000] {};
 
+	timer.mark();
 	for (const auto& vent : vents) {
 		// std::cout << vent.p1.m_x << ", " << vent.p1.y< " -> " << vent.p2.m_x << ", "
 		// 		  << vent.p2.m_y << '\n';
@@ -131,5 +136,10 @@ main()
 			if (vent_graph[x][y] > 1) ++ans;
 		}
 	}
-	std::cout << "Part 1 answer: " << ans << std::endl;
+
+	auto time_calc_vents = timer.mark();
+
+	std::cout << "Part 1 & 2 answer: " << ans << std::endl;
+	std::cout << "Timer to read file: " << time_to_read_file * 1000.f << "ms"
+			  << "\nTime to calc vents: " << time_calc_vents * 1000.f << "ms" << std::endl;
 }
