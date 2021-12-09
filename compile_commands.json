@@ -1,62 +1,82 @@
 [
 {
-  "directory": "/home/thetomato/dev/advent_of_code_2021/build/release",
-  "command": "/usr/sbin/c++   -O3 -DNDEBUG -std=c++20 -Winvalid-pch -x c++-header -include /home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/utils.dir/cmake_pch.hxx -o CMakeFiles/utils.dir/cmake_pch.hxx.gch -c /home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/utils.dir/cmake_pch.hxx.cxx",
-  "file": "/home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/utils.dir/cmake_pch.hxx.cxx"
+  "directory": "/home/thetomato/dev/advent_of_code_2021/build",
+  "command": "/usr/sbin/c++ -O3 -DNDEBUG -std=c++20 -Winvalid-pch -x c++-header -include /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/utils.dir/cmake_pch.hxx -o CMakeFiles/utils.dir/cmake_pch.hxx.gch -c /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/utils.dir/cmake_pch.hxx.cxx",
+  "file": "/home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/utils.dir/cmake_pch.hxx.cxx"
 },
 {
-  "directory": "/home/thetomato/dev/advent_of_code_2021/build/release",
-  "command": "/usr/sbin/c++   -O3 -DNDEBUG -std=c++20 -Winvalid-pch -include /home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/utils.dir/cmake_pch.hxx -o CMakeFiles/utils.dir/utils/timer.cpp.o -c /home/thetomato/dev/advent_of_code_2021/utils/timer.cpp",
+  "directory": "/home/thetomato/dev/advent_of_code_2021/build",
+  "command": "/usr/sbin/c++ -O3 -DNDEBUG -std=c++20 -Winvalid-pch -include /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/utils.dir/cmake_pch.hxx -o CMakeFiles/utils.dir/utils/timer.cpp.o -c /home/thetomato/dev/advent_of_code_2021/utils/timer.cpp",
   "file": "/home/thetomato/dev/advent_of_code_2021/utils/timer.cpp"
 },
 {
-  "directory": "/home/thetomato/dev/advent_of_code_2021/build/release",
-  "command": "/usr/sbin/c++   -O3 -DNDEBUG -std=c++20 -Winvalid-pch -x c++-header -include /home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/day_01.dir/cmake_pch.hxx -o CMakeFiles/day_01.dir/cmake_pch.hxx.gch -c /home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/day_01.dir/cmake_pch.hxx.cxx",
-  "file": "/home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/day_01.dir/cmake_pch.hxx.cxx"
+  "directory": "/home/thetomato/dev/advent_of_code_2021/build",
+  "command": "/usr/sbin/c++ -O3 -DNDEBUG -std=c++20 -Winvalid-pch -x c++-header -include /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_01.dir/cmake_pch.hxx -o CMakeFiles/day_01.dir/cmake_pch.hxx.gch -c /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_01.dir/cmake_pch.hxx.cxx",
+  "file": "/home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_01.dir/cmake_pch.hxx.cxx"
 },
 {
-  "directory": "/home/thetomato/dev/advent_of_code_2021/build/release",
-  "command": "/usr/sbin/c++   -O3 -DNDEBUG -std=c++20 -Winvalid-pch -include /home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/day_01.dir/cmake_pch.hxx -o CMakeFiles/day_01.dir/src/day_01.cpp.o -c /home/thetomato/dev/advent_of_code_2021/src/day_01.cpp",
+  "directory": "/home/thetomato/dev/advent_of_code_2021/build",
+  "command": "/usr/sbin/c++ -O3 -DNDEBUG -std=c++20 -Winvalid-pch -include /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_01.dir/cmake_pch.hxx -o CMakeFiles/day_01.dir/src/day_01.cpp.o -c /home/thetomato/dev/advent_of_code_2021/src/day_01.cpp",
   "file": "/home/thetomato/dev/advent_of_code_2021/src/day_01.cpp"
 },
 {
-  "directory": "/home/thetomato/dev/advent_of_code_2021/build/release",
-  "command": "/usr/sbin/c++   -O3 -DNDEBUG -std=c++20 -Winvalid-pch -x c++-header -include /home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/day_02.dir/cmake_pch.hxx -o CMakeFiles/day_02.dir/cmake_pch.hxx.gch -c /home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/day_02.dir/cmake_pch.hxx.cxx",
-  "file": "/home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/day_02.dir/cmake_pch.hxx.cxx"
+  "directory": "/home/thetomato/dev/advent_of_code_2021/build",
+  "command": "/usr/sbin/c++ -O3 -DNDEBUG -std=c++20 -Winvalid-pch -x c++-header -include /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_02.dir/cmake_pch.hxx -o CMakeFiles/day_02.dir/cmake_pch.hxx.gch -c /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_02.dir/cmake_pch.hxx.cxx",
+  "file": "/home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_02.dir/cmake_pch.hxx.cxx"
 },
 {
-  "directory": "/home/thetomato/dev/advent_of_code_2021/build/release",
-  "command": "/usr/sbin/c++   -O3 -DNDEBUG -std=c++20 -Winvalid-pch -include /home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/day_02.dir/cmake_pch.hxx -o CMakeFiles/day_02.dir/src/day_02.cpp.o -c /home/thetomato/dev/advent_of_code_2021/src/day_02.cpp",
+  "directory": "/home/thetomato/dev/advent_of_code_2021/build",
+  "command": "/usr/sbin/c++ -O3 -DNDEBUG -std=c++20 -Winvalid-pch -include /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_02.dir/cmake_pch.hxx -o CMakeFiles/day_02.dir/src/day_02.cpp.o -c /home/thetomato/dev/advent_of_code_2021/src/day_02.cpp",
   "file": "/home/thetomato/dev/advent_of_code_2021/src/day_02.cpp"
 },
 {
-  "directory": "/home/thetomato/dev/advent_of_code_2021/build/release",
-  "command": "/usr/sbin/c++   -O3 -DNDEBUG -std=c++20 -Winvalid-pch -x c++-header -include /home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/day_03.dir/cmake_pch.hxx -o CMakeFiles/day_03.dir/cmake_pch.hxx.gch -c /home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/day_03.dir/cmake_pch.hxx.cxx",
-  "file": "/home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/day_03.dir/cmake_pch.hxx.cxx"
+  "directory": "/home/thetomato/dev/advent_of_code_2021/build",
+  "command": "/usr/sbin/c++ -O3 -DNDEBUG -std=c++20 -Winvalid-pch -x c++-header -include /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_03.dir/cmake_pch.hxx -o CMakeFiles/day_03.dir/cmake_pch.hxx.gch -c /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_03.dir/cmake_pch.hxx.cxx",
+  "file": "/home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_03.dir/cmake_pch.hxx.cxx"
 },
 {
-  "directory": "/home/thetomato/dev/advent_of_code_2021/build/release",
-  "command": "/usr/sbin/c++   -O3 -DNDEBUG -std=c++20 -Winvalid-pch -include /home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/day_03.dir/cmake_pch.hxx -o CMakeFiles/day_03.dir/src/day_03.cpp.o -c /home/thetomato/dev/advent_of_code_2021/src/day_03.cpp",
+  "directory": "/home/thetomato/dev/advent_of_code_2021/build",
+  "command": "/usr/sbin/c++ -O3 -DNDEBUG -std=c++20 -Winvalid-pch -include /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_03.dir/cmake_pch.hxx -o CMakeFiles/day_03.dir/src/day_03.cpp.o -c /home/thetomato/dev/advent_of_code_2021/src/day_03.cpp",
   "file": "/home/thetomato/dev/advent_of_code_2021/src/day_03.cpp"
 },
 {
-  "directory": "/home/thetomato/dev/advent_of_code_2021/build/release",
-  "command": "/usr/sbin/c++   -O3 -DNDEBUG -std=c++20 -Winvalid-pch -x c++-header -include /home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/day_04.dir/cmake_pch.hxx -o CMakeFiles/day_04.dir/cmake_pch.hxx.gch -c /home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/day_04.dir/cmake_pch.hxx.cxx",
-  "file": "/home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/day_04.dir/cmake_pch.hxx.cxx"
+  "directory": "/home/thetomato/dev/advent_of_code_2021/build",
+  "command": "/usr/sbin/c++ -O3 -DNDEBUG -std=c++20 -Winvalid-pch -x c++-header -include /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_04.dir/cmake_pch.hxx -o CMakeFiles/day_04.dir/cmake_pch.hxx.gch -c /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_04.dir/cmake_pch.hxx.cxx",
+  "file": "/home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_04.dir/cmake_pch.hxx.cxx"
 },
 {
-  "directory": "/home/thetomato/dev/advent_of_code_2021/build/release",
-  "command": "/usr/sbin/c++   -O3 -DNDEBUG -std=c++20 -Winvalid-pch -include /home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/day_04.dir/cmake_pch.hxx -o CMakeFiles/day_04.dir/src/day_04.cpp.o -c /home/thetomato/dev/advent_of_code_2021/src/day_04.cpp",
+  "directory": "/home/thetomato/dev/advent_of_code_2021/build",
+  "command": "/usr/sbin/c++ -O3 -DNDEBUG -std=c++20 -Winvalid-pch -include /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_04.dir/cmake_pch.hxx -o CMakeFiles/day_04.dir/src/day_04.cpp.o -c /home/thetomato/dev/advent_of_code_2021/src/day_04.cpp",
   "file": "/home/thetomato/dev/advent_of_code_2021/src/day_04.cpp"
 },
 {
-  "directory": "/home/thetomato/dev/advent_of_code_2021/build/release",
-  "command": "/usr/sbin/c++   -O3 -DNDEBUG -std=c++20 -Winvalid-pch -x c++-header -include /home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/day_05.dir/cmake_pch.hxx -o CMakeFiles/day_05.dir/cmake_pch.hxx.gch -c /home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/day_05.dir/cmake_pch.hxx.cxx",
-  "file": "/home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/day_05.dir/cmake_pch.hxx.cxx"
+  "directory": "/home/thetomato/dev/advent_of_code_2021/build",
+  "command": "/usr/sbin/c++ -O3 -DNDEBUG -std=c++20 -Winvalid-pch -x c++-header -include /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_05.dir/cmake_pch.hxx -o CMakeFiles/day_05.dir/cmake_pch.hxx.gch -c /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_05.dir/cmake_pch.hxx.cxx",
+  "file": "/home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_05.dir/cmake_pch.hxx.cxx"
 },
 {
-  "directory": "/home/thetomato/dev/advent_of_code_2021/build/release",
-  "command": "/usr/sbin/c++   -O3 -DNDEBUG -std=c++20 -Winvalid-pch -include /home/thetomato/dev/advent_of_code_2021/build/release/CMakeFiles/day_05.dir/cmake_pch.hxx -o CMakeFiles/day_05.dir/src/day_05.cpp.o -c /home/thetomato/dev/advent_of_code_2021/src/day_05.cpp",
+  "directory": "/home/thetomato/dev/advent_of_code_2021/build",
+  "command": "/usr/sbin/c++ -O3 -DNDEBUG -std=c++20 -Winvalid-pch -include /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_05.dir/cmake_pch.hxx -o CMakeFiles/day_05.dir/src/day_05.cpp.o -c /home/thetomato/dev/advent_of_code_2021/src/day_05.cpp",
   "file": "/home/thetomato/dev/advent_of_code_2021/src/day_05.cpp"
+},
+{
+  "directory": "/home/thetomato/dev/advent_of_code_2021/build",
+  "command": "/usr/sbin/c++ -O3 -DNDEBUG -std=c++20 -Winvalid-pch -x c++-header -include /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_06.dir/cmake_pch.hxx -o CMakeFiles/day_06.dir/cmake_pch.hxx.gch -c /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_06.dir/cmake_pch.hxx.cxx",
+  "file": "/home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_06.dir/cmake_pch.hxx.cxx"
+},
+{
+  "directory": "/home/thetomato/dev/advent_of_code_2021/build",
+  "command": "/usr/sbin/c++ -O3 -DNDEBUG -std=c++20 -Winvalid-pch -include /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_06.dir/cmake_pch.hxx -o CMakeFiles/day_06.dir/src/day_06.cpp.o -c /home/thetomato/dev/advent_of_code_2021/src/day_06.cpp",
+  "file": "/home/thetomato/dev/advent_of_code_2021/src/day_06.cpp"
+},
+{
+  "directory": "/home/thetomato/dev/advent_of_code_2021/build",
+  "command": "/usr/sbin/c++ -O3 -DNDEBUG -std=c++20 -Winvalid-pch -x c++-header -include /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_07.dir/cmake_pch.hxx -o CMakeFiles/day_07.dir/cmake_pch.hxx.gch -c /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_07.dir/cmake_pch.hxx.cxx",
+  "file": "/home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_07.dir/cmake_pch.hxx.cxx"
+},
+{
+  "directory": "/home/thetomato/dev/advent_of_code_2021/build",
+  "command": "/usr/sbin/c++ -O3 -DNDEBUG -std=c++20 -Winvalid-pch -include /home/thetomato/dev/advent_of_code_2021/build/CMakeFiles/day_07.dir/cmake_pch.hxx -o CMakeFiles/day_07.dir/src/day_07.cpp.o -c /home/thetomato/dev/advent_of_code_2021/src/day_07.cpp",
+  "file": "/home/thetomato/dev/advent_of_code_2021/src/day_07.cpp"
 }
 ]
