@@ -21,6 +21,7 @@ add_executable(day_04 "./src/day_04.cpp")
 add_executable(day_05 "./src/day_05.cpp")
 add_executable(day_06 "./src/day_06.cpp")
 add_executable(day_07 "./src/day_07.cpp")
+add_executable(day_08 "./src/day_08.cpp")
 
 # NOTE: for emacs
 add_custom_command(
@@ -71,3 +72,9 @@ add_custom_command(
         COMMAND ${CMAKE_COMMAND} -E copy
                 ${CMAKE_SOURCE_DIR}/src/day_07_input.txt
                 ${CMAKE_CURRENT_BINARY_DIR}/day_07_input.txt)
+
+add_custom_command(
+        TARGET day_07 POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy
+                ${CMAKE_SOURCE_DIR}/src/day_08_input.txt
+                ${CMAKE_CURRENT_BINARY_DIR}/day_08_input.txt)
