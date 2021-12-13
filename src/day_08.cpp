@@ -6,6 +6,23 @@ struct Signal
 	std::vector<std::string> output;
 };
 
+struct Digit
+{
+	Digit() { segments.resize(7); }
+
+	/*
+	 *  0000
+	 * 1    2
+	 * 1    2
+	 *  3333
+	 * 4    5
+	 * 4    5
+	 *  6666
+	 */
+
+	std::vector<std::string> segments;
+};
+
 s32
 main(s32 argc, char* argv[])
 {
@@ -17,7 +34,7 @@ main(s32 argc, char* argv[])
 	if (argc == 2)
 		arg = argv[1];
 	else if (argc == 0 || argc == 1)
-		std::cout << "no args";
+		std::cout << "no args\n";
 	else
 		std::cout << "Invalid args\n";
 
@@ -156,7 +173,6 @@ main(s32 argc, char* argv[])
 			if (output.length() == 2 || output.length() == 3 || output.length() == 4 ||
 				output.length() == 7) {
 				++part_1_answer;
-				std::cout << part_1_answer << " - " << output << "   ";
 			}
 		}
 		std::cout << '\n';
@@ -174,6 +190,40 @@ main(s32 argc, char* argv[])
 	//==========================================================================
 	// PART 2
 	//==========================================================================
+
+	// so, we can do what we did in part and create a list of possible segments per string.
+
+	i = 0;
+	for (auto signal : signals) {
+		std::cout << "\n===========\n#" << i++ << "\n===========\n";
+		Digit digit;
+		for (auto p : signal.signal_patterns) {
+			if (p.length() == 2) {
+				digit.segments[2] += p;
+				digit.segments[5] += p;
+			} else if (p.length() == 3) {
+				// by cross referenceing 1 we can deduce segment 0
+				for (auto c_1 : p) {
+					bool found = false;
+					for (auto c_2 : digit.segments[2]) {
+						if (c_1 == c_2) {
+							found = true;
+						}
+					}
+					if (!found) {
+						digit.segments[0].push_back(c_1);
+					}
+				}
+
+			} else if (p.length() == 4) {
+			} else if (p.length() == 7) {
+			}
+		}
+
+		for (szt j {}; j < digit.segments.size(); ++j) {
+			std::cout << j << " - " << digit.segments[j] << '\n';
+		}
+	}
 
 	auto time_total = timer.total();
 	std::cout << "Time Total: " << time_total * 1000.f << "ms\n";
