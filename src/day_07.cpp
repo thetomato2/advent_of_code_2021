@@ -1,10 +1,10 @@
 #include "../utils/pch.h"
 
-s32
-main(s32 argc, char* argv[])
+i32
+main(i32 argc, char* argv[])
 {
 	util::Timer timer;
-	std::vector<s32> crabs;
+	std::vector<i32> crabs;
 	std::string arg;
 
 	if (argc == 2)
@@ -32,23 +32,23 @@ main(s32 argc, char* argv[])
 	// part 1 is the median
 	szt n = crabs.size() / 2;
 	std::nth_element(crabs.begin(), crabs.begin() + n, crabs.end());
-	s32 median = crabs[n];
+	i32 median = crabs[n];
 	std::cout << "Median: " << median << '\n';
 
 	// need to calc fuel cost after getting the median
-	s32 part_1_ans {};
+	i32 part_1_ans {};
 	for (const auto i : crabs)
 		part_1_ans += std::abs(i - median);
 
 	std::cout << "Part 1 answer: " << part_1_ans << '\n';
 
 	// part 2 is the mean, use floats to round
-	s32 sum = std::accumulate(crabs.begin(), crabs.end(), 0);
+	i32 sum = std::accumulate(crabs.begin(), crabs.end(), 0);
 	std::cout << "Sum: " << sum << '\n';
 	std::cout << "Num of Crabs: " << crabs.size() << '\n';
 	f32 mean_f32 = f32(sum) / f32(crabs.size());
 	std::cout << "Mean real: " << mean_f32 << '\n';
-	s32 mean_int = s32(mean_f32 + 0.5f);
+	i32 mean_int = i32(mean_f32 + 0.5f);
 	std::cout << "Mean: " << mean_int << '\n';
 
 	// NOTE: this fixes part 2 for me, I the imprecision of roudning was too high?
@@ -56,9 +56,9 @@ main(s32 argc, char* argv[])
 	--mean_int;
 
 	// now to calc the fuel cost
-	s32 part_2_ans {};
+	i32 part_2_ans {};
 	for (const auto i : crabs) {
-		s32 dif = std::abs(i - mean_int);
+		i32 dif = std::abs(i - mean_int);
 		std::cout << "i: " << i << ", " << dif << '\n';
 		while (dif > 0) {
 			part_2_ans += dif--;

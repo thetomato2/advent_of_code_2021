@@ -10,7 +10,7 @@ struct Move
 		forward
 	};
 
-	Move(std::string& direction, s32 units)
+	Move(std::string& direction, i32 units)
 	{
 		units_ = units;
 
@@ -28,10 +28,10 @@ struct Move
 	}
 
 	Direction direction_;
-	s32 units_;
+	i32 units_;
 };
 
-s32
+i32
 main()
 {
 	std::string input_path { "day_02_input.txt" };
@@ -43,7 +43,7 @@ main()
 		while (std::getline(input_file, line)) {
 			auto direction = line.substr(0, line.find(' '));
 			line.erase(0, line.find(' ') + 1);
-			s32 unit = std::stoi(line);
+			i32 unit = std::stoi(line);
 			moves.emplace_back(direction, unit);
 		}
 
@@ -54,8 +54,8 @@ main()
 	//========================================================
 	// part 1
 	//========================================================
-	s32 pos_x {};  // horizontal
-	s32 pos_y {};  // depth
+	i32 pos_x {};  // horizontal
+	i32 pos_y {};  // depth
 
 	for (auto& move : moves) {
 		switch (move.direction_) {
@@ -81,7 +81,7 @@ main()
 	//========================================================
 	pos_x = 0;
 	pos_y = 0;
-	s32 aim {};
+	i32 aim {};
 
 	for (auto& move : moves) {
 		switch (move.direction_) {

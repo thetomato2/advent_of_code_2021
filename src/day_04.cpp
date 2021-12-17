@@ -14,20 +14,20 @@ struct Board
 	static constexpr szt size	  = 25;
 	static constexpr szt row_size = 5;
 
-	Board(std::vector<s32> board) : is_active(true)
+	Board(std::vector<i32> board) : is_active(true)
 	{
 		m_board = board;
 		m_drawn_numbers.assign(size, 0);
 	}
 
-	std::vector<s32> m_board;
-	std::vector<s32> m_drawn_numbers;
+	std::vector<i32> m_board;
+	std::vector<i32> m_drawn_numbers;
 
 	bool is_active;
 };
 
 void
-check_board_has_numbers(Board& board, s32 n)
+check_board_has_numbers(Board& board, i32 n)
 {
 	for (szt i {}; i < Board::size; ++i) {
 		if (board.m_board[i] == n) {
@@ -37,12 +37,12 @@ check_board_has_numbers(Board& board, s32 n)
 }
 
 bool
-check_board_for_win(std::vector<s32>& board)
+check_board_for_win(std::vector<i32>& board)
 {
 	szt sz = Board::row_size;
 	// check horizontal
 	for (szt x {}; x < sz; ++x) {
-		s32 xy = x * sz;
+		i32 xy = x * sz;
 		if (std::accumulate(board.begin() + xy, board.begin() + xy + sz, 0) == 5) {
 			return true;
 		}
@@ -59,14 +59,14 @@ check_board_for_win(std::vector<s32>& board)
 	return false;
 }
 
-s32
+i32
 main()
 {
 	std::string input_path { "day_04_input.txt" };
 	std::ifstream input_file(input_path);
 
 	// the drawn bingo numbers
-	std::vector<s32> nums;
+	std::vector<i32> nums;
 	std::vector<Board> boards;
 
 	// NOTE: this was annoying to parse and is a reason I don't really like streams much.
@@ -85,7 +85,7 @@ main()
 			}
 		}
 		n.clear();
-		std::vector<s32> cur_board;
+		std::vector<i32> cur_board;
 
 		while (std::getline(input_file, line)) {
 			while (line.length() > 2) {
@@ -122,7 +122,7 @@ main()
 	// has won. No reason to repeat code here, just make a lambda
 
 	auto get_board_sum = [](Board& board) {
-		s32 sum {};
+		i32 sum {};
 		for (szt j {}; j < Board::size; ++j) {
 			if (board.m_drawn_numbers[j] == 0) sum += board.m_board[j];
 		}
@@ -130,7 +130,7 @@ main()
 	};
 
 	Board* last_winner_ptr { nullptr };
-	s32 last_winner_num;
+	i32 last_winner_num;
 
 	bool is_part1_over = false;
 	for (; i < nums.size(); ++i) {
@@ -139,8 +139,8 @@ main()
 			check_board_has_numbers(board, nums[i]);
 			if (check_board_for_win(board.m_drawn_numbers)) {
 				if (!is_part1_over) {
-					s32 part_1_sum = get_board_sum(board);
-					s32 part_1_ans = part_1_sum * nums[i];
+					i32 part_1_sum = get_board_sum(board);
+					i32 part_1_ans = part_1_sum * nums[i];
 					std::cout << "Part 1 answer: " << part_1_ans << std::endl;
 					is_part1_over = true;
 				}
@@ -151,7 +151,7 @@ main()
 		}
 	}
 
-	s32 part_2_sum = get_board_sum(*last_winner_ptr);
-	s32 part_2_ans = part_2_sum * last_winner_num;
+	i32 part_2_sum = get_board_sum(*last_winner_ptr);
+	i32 part_2_ans = part_2_sum * last_winner_num;
 	std::cout << "Part 2 answer: " << part_2_ans << std::endl;
 }

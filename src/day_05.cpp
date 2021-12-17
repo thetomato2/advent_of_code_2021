@@ -3,10 +3,10 @@
 struct Point
 {
 	Point() : x(0), y(0) {}
-	Point(s32 p_x, s32 p_y) : x(p_x), y(p_y) {}
+	Point(i32 p_x, i32 p_y) : x(p_x), y(p_y) {}
 
-	s32 x;
-	s32 y;
+	i32 x;
+	i32 y;
 };
 
 struct Line
@@ -15,7 +15,7 @@ struct Line
 	Point p2;
 };
 
-s32
+i32
 main()
 {
 	std::string input_path { "day_05_input.txt" };
@@ -29,7 +29,7 @@ main()
 		std::string line;
 		while (std::getline(input_file, line)) {
 			Line cur_vent;
-			s32 i {};
+			i32 i {};
 			std::string cur_point;
 			while (line[i] != ',') {
 				cur_point.push_back(line[i]);
@@ -64,7 +64,7 @@ main()
 	}
 	auto time_to_read_file = timer.mark();
 
-	s32 vent_graph[1000][1000] {};
+	i32 vent_graph[1000][1000] {};
 
 	timer.mark();
 	for (const auto& vent : vents) {
@@ -76,25 +76,25 @@ main()
 		//========================================================
 		// check only the straight vents
 		if (vent.p1.x == vent.p2.x) {
-			s32 x = vent.p1.x;
+			i32 x = vent.p1.x;
 			if (vent.p1.y < vent.p2.y) {
-				for (s32 y { vent.p1.y }; y <= vent.p2.y; ++y) {
+				for (i32 y { vent.p1.y }; y <= vent.p2.y; ++y) {
 					++vent_graph[x][y];
 				}
 			} else {
-				for (s32 y { vent.p1.y }; y >= vent.p2.y; --y) {
+				for (i32 y { vent.p1.y }; y >= vent.p2.y; --y) {
 					++vent_graph[x][y];
 				}
 			}
 
 		} else if (vent.p1.y == vent.p2.y) {
-			s32 y = vent.p1.y;
+			i32 y = vent.p1.y;
 			if (vent.p1.x < vent.p2.x) {
-				for (s32 x { vent.p1.x }; x <= vent.p2.x; ++x) {
+				for (i32 x { vent.p1.x }; x <= vent.p2.x; ++x) {
 					++vent_graph[x][y];
 				}
 			} else {
-				for (s32 x { vent.p1.x }; x >= vent.p2.x; --x) {
+				for (i32 x { vent.p1.x }; x >= vent.p2.x; --x) {
 					++vent_graph[x][y];
 				}
 			}
@@ -103,8 +103,8 @@ main()
 			// part 2
 			//========================================================
 			// check diagonal vents
-			s32 x { vent.p1.x };
-			s32 y { vent.p1.y };
+			i32 x { vent.p1.x };
+			i32 y { vent.p1.y };
 			if (vent.p1.x < vent.p2.x) {
 				if (vent.p1.y < vent.p2.y) {
 					while (x <= vent.p2.x && y <= vent.p2.y) {
@@ -129,10 +129,10 @@ main()
 		}
 	}
 
-	s32 ans {};
+	i32 ans {};
 
-	for (s32 x {}; x < 1000; ++x) {
-		for (s32 y {}; y < 1000; ++y) {
+	for (i32 x {}; x < 1000; ++x) {
+		for (i32 y {}; y < 1000; ++y) {
 			if (vent_graph[x][y] > 1) ++ans;
 		}
 	}

@@ -1,46 +1,54 @@
-#include "../utils/pch.h"
+#include "day_01.hpp"
 
-s32
-main()
+namespace day01
 {
-	std::string input_01_path { "day_01_input.txt" };
-	std::ifstream input_01_file(input_01_path);
-	std::vector<s32> nums;
+std::vector<i32>
+read_input_file(std::string input_path)
+{
+	std::vector<i32> res;
+
+	std::ifstream input_01_file(input_path);
 	std::string cur_line;
 
 	if (input_01_file.is_open()) {
 		while (std::getline(input_01_file, cur_line)) {
-			nums.push_back(std::stoi(cur_line));
+			res.push_back(std::stoi(cur_line));
 		}
 	} else {
-		std::cout << "Failed to open " << input_01_path << "!\n";
+		std::cout << "Failed to open " << input_path << "!\n";
 	}
 
-	// =========================================================
-	// part 1
-	// =========================================================
+	return res;
+}
 
-	s32 inc_cnt {};
-	s32 prev_n {};
-	prev_n = nums.front();
+i32
+do_part_01(std::vector<i32>& input)
+{
+	i32 res {};
+	i32 prev_n {};
+	prev_n = input.front();
 
-	for (szt i {}; i < nums.size(); ++i) {
-		auto n = nums[i];
-		if (n > prev_n) ++inc_cnt;
+	for (szt i {}; i < input.size(); ++i) {
+		auto n = input[i];
+		if (n > prev_n) ++res;
 		prev_n = n;
 	}
 
-	std::cout << "Increase count: " << inc_cnt << std::endl;
-
-	// part 2
-	// =========================================================
-
-	s32 sum_inc_cnt {};
-
-	for (szt i { 3 }; i < nums.size(); ++i) {
-		s32 a = nums[i - 3] + nums[i - 2] + nums[i - 1];
-		s32 b = nums[i - 2] + nums[i - 1] + nums[i];
-		if (b > a) ++sum_inc_cnt;
-	}
-	std::cout << "Sum ncrease count: " << sum_inc_cnt << std::endl;
+	return res;
 }
+
+i32
+do_part_02(std::vector<i32>& input)
+{
+	i32 res {};
+
+	for (szt i { 3 }; i < input.size(); ++i) {
+		i32 a = input[i - 3] + input[i - 2] + input[i - 1];
+		i32 b = input[i - 2] + input[i - 1] + input[i];
+		if (b > a) ++res;
+	}
+
+	return res;
+}
+
+}  // namespace day01

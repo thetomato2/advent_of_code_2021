@@ -1,6 +1,6 @@
 #include "../utils/pch.h"
 
-s32
+i32
 main()
 {
 	util::Timer timer;
@@ -9,7 +9,7 @@ main()
 	std::string input_path { "day_06_input.txt" };
 	std::ifstream input_file(input_path);
 
-	std::vector<s32> fishies;
+	std::vector<i32> fishies;
 
 	if (input_file.is_open()) {
 		std::string num;
@@ -25,8 +25,8 @@ main()
 
 	// brute force method
 	auto fishies_part_1			  = fishies;
-	constexpr s32 num_days_part_1 = 80;
-	for (s32 day {}; day < num_days_part_1; ++day) {
+	constexpr i32 num_days_part_1 = 80;
+	for (i32 day {}; day < num_days_part_1; ++day) {
 		// cache the size becasue if you add to the vector it invalidates
 		// its iterators, so no ranged for etc
 		szt cur_sz = fishies_part_1.size();
@@ -49,7 +49,7 @@ main()
 	//========================================================
 	// part 2
 	//========================================================
-	constexpr s32 num_days_part_2 = 256;
+	constexpr i32 num_days_part_2 = 256;
 
 	auto fishies_part_2 = fishies;
 	timer.mark();
